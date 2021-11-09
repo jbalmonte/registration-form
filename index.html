@@ -5,234 +5,353 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order Form</title>
+    <title>Registration Form</title>
     <link rel="icon" type="image/png" media="all" href="/favicon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet"
+        type="text/css" />
 
-    <style>
-        #main-table {
-            width: 150%;
-        }
-
-        @media screen and (max-width:1000px) {
-            #main-table {
-                width: 100%;
-            }
-
-            .table-sm {
-                width: 100%;
-            }
-
-            td:nth-child(2) {
-                width: 80%;
-            }
-        }
-    </style>
 </head>
 
 <body class="bg-dark">
-    <div class="card my-5 mx-auto shadow-sm" style="max-width: 80%;">
+    <form class="card my-5 mx-auto shadow-sm" style="max-width: 80%;">
         <div class="card-header text-light bg-secondary text-center">
-            <i class="fas fa-pen-alt"></i> ORDER FORM
+            <i class="fas fa-pen-alt"></i> REGISTRATION FORM
         </div>
-        <div class="card-body bg-light">
-            <form class="form">
-                <div class="card">
-                    <div class="card-header text-info">
-                        <i class="far fa-user"></i>
-                        Customer
-                    </div>
-                    <div class="card-body text-dark">
+        <div class="card-body bg-light px-5">
 
-                        <div class="d-lg-flex justify-content-lg-between">
-
-                            <div>
-                                <table class="table-sm" id="main-table">
-                                    <tr>
-                                        <td>
-                                            <label for="name" class="col-form-label col-form-label-sm">
-                                                Customer Name:</label>
-                                        </td>
-                                        <td>
-                                            <input type="text" class="form-control form-control-sm" id="name">
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <label for="name" class=" col-form-label col-form-label-sm">Address:</label>
-                                        </td>
-                                        <td>
-                                            <input type="email" class="form-control form-control-sm" id="name">
-                                        </td>
-                                    </tr>
-
-
-                                    <tr>
-                                        <td>
-                                            <label for="name" class=" col-form-label col-form-label-sm">Contact
-                                                Name:</label>
-                                        </td>
-                                        <td>
-                                            <input type="text" class="form-control form-control-sm" id="name">
-                                        </td>
-
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <label for="name" class=" col-form-label col-form-label-sm">Phone:</label>
-                                        </td>
-                                        <td>
-                                            <input type="email" class="form-control form-control-sm" id="name">
-
-                                        </td>
-
-
-                                    <tr>
-                                        <td>
-                                            <label for="name" class=" col-form-label col-form-label-sm">Mobile:</label>
-                                        </td>
-                                        <td>
-                                            <input type="email" class="form-control form-control-sm" id="name">
-                                        </td>
-                                    </tr>
-
-
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <label for="name" class=" col-form-label col-form-label-sm">Email:</label>
-                                        </td>
-
-                                        <td>
-                                            <input type="email" class="form-control form-control-sm" id="name">
-                                        </td>
-                                    </tr>
-
-                                </table>
-                            </div>
-
-                            <div>
-                                <table class="table-sm">
-                                    <tr>
-                                        <td>
-                                            <label for="date" class=" col-form-label col-form-label-sm">Order
-                                                Date:</label>
-                                        </td>
-
-                                        <td>
-                                            <input type="date" class="form-control form-control-sm" id="date">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label for="order-number" class="col-form-label col-form-label-sm">Order
-                                                Number:</label>
-                                        </td>
-
-                                        <td>
-                                            <input type="number" class="form-control form-control-sm" id="order-number">
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-
+            <div class="form-row">
+                <div class="form-group col-4">
+                    <label for="first-name" class="col-form-label col-form-label-sm">
+                        First Name:
+                    </label>
+                    <div class="input-group">
+                        <input required type="text" id="first-name" class="form-control form-control-sm"
+                            placeholder="Juan">
+                        <div class="input-group-append">
+                            <span class="input-group-text"><i class="far fa-font-case"></i></span>
                         </div>
                     </div>
                 </div>
-                <div class="card mt-4">
-                    <div class="card-header text-info">
 
-                        <i class="fas fa-utensils"></i>
-                        Products to Order
-                    </div>
-                    <div class="card-body">
-                        <table class="table table-bordered table-responsive-md">
-                            <thead class="bg-secondary text-light">
-                                <tr class="text-center">
-                                    <th>Unit</th>
-                                    <th>Quantity</th>
-                                    <th>Product Code</th>
-                                    <th>Description</th>
-                                    <th>Unit Price</th>
-                                    <th>Total Price</th>
-                                </tr>
-                            </thead>
-
-                            <tbody class="bg-light">
-                                <tr>
-                                    <td class="col-1"> <input type="number" class="form-control form-control-sm"> </td>
-                                    <td class="col-1"> <input type="number" class="form-control form-control-sm"> </td>
-                                    <td class="col-2"> <input type="text" class="form-control form-control-sm"> </td>
-                                    <td class="col-4"> <input type="description" class="form-control form-control-sm">
-                                    </td>
-                                    <td class="col-2"> <input type="number" class="form-control form-control-sm"> </td>
-                                    <td class="col-2"> <input type="number" class="form-control form-control-sm"> </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-1"> <input type="number" class="form-control form-control-sm"> </td>
-                                    <td class="col-1"> <input type="number" class="form-control form-control-sm"> </td>
-                                    <td class="col-2"> <input type="text" class="form-control form-control-sm"> </td>
-                                    <td class="col-4"> <input type="description" class="form-control form-control-sm">
-                                    </td>
-                                    <td class="col-2"> <input type="number" class="form-control form-control-sm"> </td>
-                                    <td class="col-2"> <input type="number" class="form-control form-control-sm"> </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-1"> <input type="number" class="form-control form-control-sm"> </td>
-                                    <td class="col-1"> <input type="number" class="form-control form-control-sm"> </td>
-                                    <td class="col-2"> <input type="text" class="form-control form-control-sm"> </td>
-                                    <td class="col-4"> <input type="description" class="form-control form-control-sm">
-                                    </td>
-                                    <td class="col-2"> <input type="number" class="form-control form-control-sm"> </td>
-                                    <td class="col-2"> <input type="number" class="form-control form-control-sm"> </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-1"> <input type="number" class="form-control form-control-sm"> </td>
-                                    <td class="col-1"> <input type="number" class="form-control form-control-sm"> </td>
-                                    <td class="col-2"> <input type="text" class="form-control form-control-sm"> </td>
-                                    <td class="col-4"> <input type="description" class="form-control form-control-sm">
-                                    </td>
-                                    <td class="col-2"> <input type="number" class="form-control form-control-sm"> </td>
-                                    <td class="col-2"> <input type="number" class="form-control form-control-sm"> </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-1"> <input type="number" class="form-control form-control-sm"> </td>
-                                    <td class="col-1"> <input type="number" class="form-control form-control-sm"> </td>
-                                    <td class="col-2"> <input type="text" class="form-control form-control-sm"> </td>
-                                    <td class="col-4"> <input type="description" class="form-control form-control-sm">
-                                    </td>
-                                    <td class="col-2"> <input type="number" class="form-control form-control-sm"> </td>
-                                    <td class="col-3"> <input type="number" class="form-control form-control-sm"> </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="ml-auto col-lg-5 mr-md-n5">
-                            <div class="input-group row">
-                                <label for="total" class="col-form-label col-md-3">Total:</label>
-                                <div class="input-group col-md-9">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">
-                                            ₱
-                                        </span>
-                                    </div>
-                                    <input type="number" name="total" id="total" class="form-control">
-                                </div>
-                            </div>
+                <div class="form-group col-4">
+                    <label for="middle-name" class="col-form-label col-form-label-sm">
+                        Middle Name:
+                    </label>
+                    <div class="input-group">
+                        <input required type="text" id="middle-name" class="form-control form-control-sm"
+                            placeholder="Quintos">
+                        <div class="input-group-append">
+                            <span class="input-group-text"><i class="far fa-font-case"></i></span>
                         </div>
-
-                    </div>
-                    <div class="card-footer">
-                        <button type="submit" class="btn btn-success"> <i class="far fa-paper-plane"></i>
-                            Submit</button>
-                        <button type="reset" class="btn btn-danger"> <i class="fas fa-redo"></i> Reset</button>
                     </div>
                 </div>
-            </form>
+
+                <div class="form-group col-4">
+                    <label for="last-name" class="col-form-label col-form-label-sm">
+                        Last Name:
+                    </label>
+                    <div class="input-group">
+                        <input required type="text" id="last-name" class="form-control form-control-sm"
+                            placeholder="Dela Cruz">
+                        <div class="input-group-append">
+                            <span class="input-group-text"><i class="far fa-font-case"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="form-row">
+                <div class="form-group col-4">
+                    <label for="username" class="col-form-label col-form-label-sm">
+                        Preferred Username:
+                    </label>
+                    <div class="input-group">
+                        <input required type="text" id="username" class="form-control form-control-sm"
+                            placeholder="username123">
+                        <div class="input-group-append">
+                            <span class="input-group-text"><i class="far fa-user"></i> </span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group col-4">
+                    <label for="email" class="col-form-label col-form-label-sm">
+                        Email:
+                    </label>
+                    <div class="input-group">
+                        <input required type="email" id="email" class="form-control form-control-sm"
+                            placeholder="user@email.com">
+                        <div class="input-group-append">
+                            <span class="input-group-text"><i class="far fa-envelope"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-4">
+                    <label for="contact-number" class="col-form-label col-form-label-sm">
+                        Contact Number:
+                    </label>
+                    <div class="input-group">
+                        <input required type="text" id="contact-number" class="form-control form-control-sm"
+                            placeholder="09xxxxxxxxx">
+                        <div class="input-group-append">
+                            <span class="input-group-text"><i class="far fa-phone"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="form-row">
+                <div class="form-group col-4">
+                    <label for="address" class="col-form-label col-form-label-sm">
+                        Address:
+                    </label>
+                    <div class="input-group">
+                        <input required type="text" id="address" class="form-control form-control-sm"
+                            placeholder="Unit, Street, Subdivision, etc.">
+                        <div class="input-group-append">
+                            <span class="input-group-text"><i class="far fa-home"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-4">
+                    <label for="region" class="col-form-label col-form-label-sm">
+                        Region:
+                    </label>
+                    <div class="input-group">
+                        <input required type="text" id="region" class="form-control form-control-sm"
+                            placeholder="Region">
+                        <div class="input-group-append">
+                            <span class="input-group-text"><i class="far fa-globe-asia"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-4">
+                    <label for="province" class="col-form-label col-form-label-sm">
+                        Province:
+                    </label>
+                    <div class="input-group">
+                        <input required type="text" id="province" class="form-control form-control-sm"
+                            placeholder="Province">
+                        <div class="input-group-append">
+                            <span class="input-group-text"><i class="far fa-gopuram"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-row">
+                <div class="form-group col-4">
+                    <label for="city" class="col-form-label col-form-label-sm">
+                        City:
+                    </label>
+                    <div class="input-group">
+                        <input required type="text" id="city" class="form-control form-control-sm" placeholder="City">
+                        <div class="input-group-append">
+                            <span class="input-group-text"><i class="far fa-city"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-4">
+                    <label for="barangay" class="col-form-label col-form-label-sm">
+                        Barangay:
+                    </label>
+                    <div class="input-group">
+                        <input required type="text" id="barangay" class="form-control form-control-sm"
+                            placeholder="Brgy.">
+                        <div class="input-group-append">
+                            <span class="input-group-text"><i class="far fa-hotel"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-4">
+                    <label for="postal-code" class="col-form-label col-form-label-sm">
+                        Postal Code:
+                    </label>
+                    <div class="input-group">
+                        <input required type="text" id="postal-code" class="form-control form-control-sm"
+                            placeholder="Postal Code">
+                        <div class="input-group-append">
+                            <span class="input-group-text"><i class="far fa-mailbox"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="form-row">
+                <div class="form-group col-4">
+                    <label for="gender" class="col-form-label col-form-label-sm">
+                        Gender:
+                    </label>
+                    <div class="input-group">
+                        <select class="form-control form-control-sm" id="gender">
+                            <option selected>Select</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+
+                        <div class="input-group-append">
+                            <span class="input-group-text"><i class="fas fa-venus-mars"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-4">
+                    <label for="birthday" class="col-form-label col-form-label-sm">
+                        Date of Birth:
+                    </label>
+                    <div class="input-group">
+                        <input type="date" id="birthday" class="form-control form-control-sm">
+                        <div class="input-group-append">
+                            <span class="input-group-text"><i class="far fa-calendar"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-4">
+                    <label for="birth-place" class="col-form-label col-form-label-sm">
+                        Place of Birth:
+                    </label>
+                    <div class="input-group">
+                        <input type="text" id="birth-place" class="form-control form-control-sm"
+                            placeholder="Birth Place">
+                        <div class="input-group-append">
+                            <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-row">
+                <div class="form-group col-4">
+                    <label for="nationality" class="col-form-label col-form-label-sm">
+                        Nationality:
+                    </label>
+                    <div class="input-group">
+                        <input type="text" id="nationality" class="form-control form-control-sm"
+                            placeholder="Nationality">
+                        <div class="input-group-append">
+                            <span class="input-group-text"><i class="far fa-flag"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-4">
+                    <label for="civil-status" class="col-form-label col-form-label-sm">
+                        Civil Status:
+                    </label>
+                    <div class="input-group">
+                        <select name="civil-status" id="civil-status" class="form-control form-control-sm">
+                            <option selected>Select</option>
+                            <option value="married">M (married)</option>
+                            <option value="single">S (single)</option>
+                            <option value="divorced">D (divorced)</option>
+                            <option value="widowed">W (widowed)</option>
+                        </select>
+                        <div class="input-group-append">
+                            <span class="input-group-text"><i class="far fa-rings-wedding"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-4">
+                    <label for="nationality" class="col-form-label col-form-label-sm">
+                        Mother's Maiden Name:
+                    </label>
+                    <div class="input-group">
+                        <input type="text" id="nationality" class="form-control form-control-sm"
+                            placeholder="Mother's Maiden Name">
+                        <div class="input-group-append">
+                            <span class="input-group-text"><i class="far fa-female"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-row">
+                <div class="form-group col-4">
+                    <label for="employment-status" class="col-form-label col-form-label-sm">
+                        Employment Status:
+                    </label>
+                    <div class="input-group">
+                        <select name="employment-status" id="employment-status" class="form-control form-control-sm">
+                            <option selected>Select</option>
+                            <option value="employed">1. Employed</option>
+                            <option value="consultant">2. Consultant</option>
+                            <option value="self-employed-with-own-business">3. Self-employed with Own Business
+                            </option>
+                            <option value="self-employed-as-online-freelance">4. Self-employed as Online Freelance
+                            </option>
+                        </select>
+
+                        <div class="input-group-append">
+                            <span class="input-group-text"><i class="fas fa-user-tie"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-4">
+                    <label for="civil-status" class="col-form-label col-form-label-sm">
+                        Employer/Company:
+                    </label>
+                    <div class="input-group">
+                        <input type="text" name="employer" id="employer" class="form-control form-control-sm"
+                            placeholder="Company">
+                        <div class="input-group-append">
+                            <span class="input-group-text"><i class="far fa-building"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="form-group col-4">
+                    <label for="sourcefund" class="col-form-label col-form-label-sm">
+                        Source of Funds:
+                    </label>
+                    <div class="input-group">
+                        <select name="sourcefund" id="sourcefund" class="form-control form-control-sm">
+                            <option selected>Select</option>
+                            <option value="allowance">1. Allowance</option>
+                            <option value="business-profit">2. Business Profit</option>
+                            <option value="commissions">3. Commissions
+                            </option>
+                            <option value="inheritance">4. Inheritance
+                            </option>
+                            <option value="loan">5. Loan
+                            </option>
+                        </select>
+
+                        <div class="input-group-append">
+                            <span class="input-group-text"><i class="far fa-hand-holding-usd"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
+        <div class="card-footer">
+            <div class="float-right">
+                <button type="submit" class="btn btn-primary"> <i class="far fa-paper-plane"></i>
+                    Submit</button>
+                <button type="reset" class="btn btn-danger"> <i class="far fa-redo"></i> Reset</button>
+            </div>
+        </div>
+    </form>
+
 </body>
 
 </html>
